@@ -1,0 +1,275 @@
+{
+  "Component with props": {
+    "scope": "typescriptreact",
+    "prefix": "nscp",
+    "description": "Create a new React Component with props",
+    "body": [
+      "export interface $1Props {",
+      "  $2",
+      "}",
+      "",
+      "export default function $1(props: $1Props) {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Component without props": {
+    "scope": "typescriptreact",
+    "prefix": "nsc",
+    "description": "Create a new React Component (no props)",
+    "body": ["export default function $1() {", "  return $3;", "}", ""]
+  },
+  "Component with children": {
+    "scope": "typescriptreact",
+    "prefix": "nscc",
+    "description": "Create a new React Component with children",
+    "body": [
+      "export interface $1Props {",
+      "  children: React.ReactNode;",
+      "  $2",
+      "}",
+      "",
+      "export default function $1({ children }: $1Props) {",
+      "  return <>{children}$3;</>",
+      "}",
+      ""
+    ]
+  },
+  "Server component without props": {
+    "scope": "typescriptreact",
+    "prefix": "nssc",
+    "description": "Create a new React Server Component (no props)",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export default function $1() {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Server component with props": {
+    "scope": "typescriptreact",
+    "prefix": "nsscp",
+    "description": "Create a new React Server Component with props",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export interface $1Props {",
+      "  $2",
+      "}",
+      "",
+      "export default function $1(props: $1Props) {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Server component with children": {
+    "scope": "typescriptreact",
+    "prefix": "nsscc",
+    "description": "Create a new React Server Component with children",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export interface $1Props {",
+      "  children: React.ReactNode;",
+      "  $2",
+      "}",
+      "",
+      "export default function $1({ children }: $1Props) {",
+      "  return <>{children}$3;</>",
+      "}",
+      ""
+    ]
+  },
+  "Async server component without props": {
+    "scope": "typescriptreact",
+    "prefix": "nsasc",
+    "description": "Create a new React Server Component (no props)",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export default async function $1() {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Async server component with props": {
+    "scope": "typescriptreact",
+    "prefix": "nsascp",
+    "description": "Create a new Async React Server Component with props",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export interface $1Props {",
+      "  $2",
+      "}",
+      "",
+      "export default async function $1(props: $1Props) {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Async server component with children": {
+    "scope": "typescriptreact",
+    "prefix": "nsascc",
+    "description": "Create a new Async React Server Component with props",
+    "body": [
+      "import 'server-only';",
+      "",
+      "export interface $1Props {",
+      "  children: React.ReactNode;",
+      "  $2",
+      "}",
+      "",
+      "export default async function $1({ children }: $1Props) {",
+      "  return <>{children}$3;</>",
+      "}",
+      ""
+    ]
+  },
+  "Client Component with props": {
+    "scope": "typescriptreact",
+    "prefix": "nsclp",
+    "description": "Create a new React Client Component with props",
+    "body": [
+      "\"use client\";",
+      "",
+      "export interface $1Props {",
+      "  $2",
+      "}",
+      "",
+      "export default function $1(props: $1Props) {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Client Component without props": {
+    "scope": "typescriptreact",
+    "prefix": "nscl",
+    "description": "Create a new React Client Component (no props)",
+    "body": [
+      "\"use client\";",
+      "",
+      "export default function $1() {",
+      "  return $3;",
+      "}",
+      ""
+    ]
+  },
+  "Client Component with children": {
+    "scope": "typescriptreact",
+    "prefix": "nsclc",
+    "description": "Create a new React Client Component with children",
+    "body": [
+      "\"use client\";",
+      "",
+      "export interface $1Props {",
+      "  children: React.ReactNode;",
+      "  $2",
+      "}",
+      "",
+      "export default function $1({ children }: $1Props) {",
+      "  return <>{children}$3;</>",
+      "}",
+      ""
+    ]
+  },
+  "Provider": {
+    "scope": "typescriptreact",
+    "prefix": "nsp",
+    "description": "Create a new React Provider",
+    "body": [
+      "\"use client\";",
+      "",
+      "import React from 'react';",
+      "",
+      "interface ${1}ProviderProps {",
+      "  children: React.ReactNode;",
+      "  value: ${2};",
+      "}",
+      "",
+      "const ${1}Context = React.createContext<${2} | null>(null);",
+      "",
+      "function ${1}Provider({ children, value }: ${1}ProviderProps) {",
+      "  return (",
+      "    <${1}Context.Provider value={value}>",
+      "      {children}",
+      "    </${1}Context.Provider>",
+      "  );",
+      "}",
+      "",
+      "function use${1}(): ${2} {",
+      "  const ${1/(.)(.*)/${1:/downcase}${2}/} = React.useContext(${1}Context);",
+      "  if (!${1/(.)(.*)/${1:/downcase}${2}/}) {",
+      "    throw new Error('use${1} must be used within a ${1}Provider');",
+      "  }",
+      "  return ${1/(.)(.*)/${1:/downcase}${2}/};",
+      "}",
+      "",
+      "export { ${1}Provider, use${1} };"
+    ]
+  },
+  "Layout": {
+    "prefix": "nsl",
+    "scope": "typescriptreact",
+    "body": [
+      "export default function ${1}Layout({",
+      "  children,",
+      "}: {",
+      "  children: React.ReactNode;",
+      "}) {",
+      "  return <>{children}</>;",
+      "}"
+    ],
+    "description": "Nested layout"
+  },
+  "Template": {
+    "prefix": "nst",
+    "scope": "typescriptreact",
+    "description": "Template",
+    "body": [
+      "export default function ${1:Template}({",
+      "  children,",
+      "}: {",
+      "  children: React.ReactNode;",
+      "}) {",
+      "  return <>{children}</>;",
+      "}"
+    ]
+  },
+  "NextJS static metadata": {
+    "prefix": "nssm",
+    "scope": "typescriptreact",
+    "description": "Static metadata",
+    "body": [
+      "import { Metadata } from \"next\";",
+      "",
+      "export const metadata: Metadata = {",
+      "  title: \"$1\",",
+      "  description: \"$2\",",
+      "};"
+    ]
+  },
+  "NextJS dynamic metadata": {
+    "prefix": "nsdm",
+    "scope": "typescriptreact",
+    "description": "Dynamic metadata",
+    "body": [
+      "import { Metadata, ResolvingMetadata } from \"next\";",
+      "",
+      "export async function generateMetadata(",
+      "  props: $1, // same as page",
+      "  parent: ResolvingMetadata",
+      "): Promise<Metadata> {",
+      "  return {",
+      "  };",
+      "}"
+    ]
+  }
+}
