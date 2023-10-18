@@ -1,1 +1,11 @@
-node_modules/**
+**/*.ts
+**/*.map
+**/tsconfig.json
+**/*.log
+**/.DS_Store
+**/.git
+**/.github
+**/node_modules/**
+**/*.vsix
+.vscode/**
+.changeset
