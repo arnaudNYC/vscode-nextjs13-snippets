@@ -1,7 +1,7 @@
 {
   "name": "vscode-nextjs13-snippets",
   "description": "Code snippets for NextJS 13 in TypeScript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "NextJS 13 TypeScript code snippets",
   "publisher": "arnaudNYC",
   "icon": "images/ns.png",
