@@ -4,15 +4,16 @@ This README provides details about a collection of snippets for React and Next.j
 
 ## How to Use
 
-1.  In a `.tsx` file in VSCode, type the prefix associated with the desired snippet.
-2.  Press `Enter` or `Tab` to insert the snippet.
-3.  Use the tab key to navigate between placeholders and fill in the desired values.
+1. Open a .tsx file in VSCode.
+1. Input the prefix corresponding to the snippet you wish to use.
+1. Either press Enter or Tab to integrate the snippet into your file.
+1. Utilize the tab key to seamlessly switch between placeholders, enabling you to input the desired values.
 
 ## Snippets
 
 ### Component with props
 
-**Usage:** `nscp ->`
+**Usage:** `nscp →`
 
 **Generated Code:**
 
@@ -26,7 +27,7 @@ export default function Component(props: ComponentProps) {
 
 ### Component without props
 
-**Usage:** `nsc ->`
+**Usage:** `nsc →`
 
 **Generated Code:**
 
@@ -38,7 +39,7 @@ export default function Component() {
 
 ### Component with children
 
-**Usage:** `nscc ->`
+**Usage:** `nscc →`
 
 **Generated Code:**
 
@@ -54,7 +55,7 @@ export default function Component({ children }: ComponentProps) {
 
 ### Server component without props
 
-**Usage:** `nssc ->`
+**Usage:** `nssc `
 
 **Generated Code:**
 
@@ -68,7 +69,7 @@ export default function ServerComponent() {
 
 ### Server component with props
 
-**Usage:** `nsscp ->`
+**Usage:** `nsscp →`
 
 **Generated Code:**
 
@@ -84,17 +85,27 @@ export default function ServerComponent(props: ServerComponentProps) {
 
 ### Server component with children
 
-**Usage:** `nsscc ->`
+**Usage:** `nsscc →`
 
 **Generated Code:**
 
 ```tsx
+import "server-only";
 
+export interface ServerComponentWithChildrenProps {
+  children: React.ReactNode;
+}
+
+export default function ServerComponentWithChildren({
+  children,
+}: ServerComponentWithChildrenProps) {
+  return <>{children};</>;
+}
 ```
 
 ### Async server component without props
 
-**Usage:** `nsasc ->`
+**Usage:** `nsasc →`
 
 **Generated Code:**
 
@@ -110,7 +121,7 @@ export default function ServerComponent({ children }: ServerComponentProps) {
 
 ### Async server component with props
 
-**Usage:** `nsascp ->`
+**Usage:** `nsascp →`
 
 **Generated Code:**
 
@@ -126,7 +137,7 @@ export default async function ServerComponent(props: ServerComponentProps) {
 
 ### Async server component with children
 
-**Usage:** `nsascc ->`
+**Usage:** `nsascc →`
 
 **Generated Code:**
 
@@ -146,7 +157,7 @@ export default async function ServerComponent({
 
 ### Client Component with props
 
-**Usage:** `nsclp ->`
+**Usage:** `nsclp →`
 
 **Generated Code:**
 
@@ -162,7 +173,7 @@ export default function ClientComponent(props: ClientComponentProps) {
 
 ### Client Component without props
 
-**Usage:** `nscl ->`
+**Usage:** `nscl →`
 
 **Generated Code:**
 
@@ -176,7 +187,7 @@ export default function ClientComponent() {
 
 ### Client Component with children
 
-**Usage:** `nsclc ->`
+**Usage:** `nsclc →`
 
 **Generated Code:**
 
@@ -194,7 +205,7 @@ export default function ClientComponent({ children }: ClientComponentProps) {
 
 ### Provider
 
-**Usage:** `nsp ->`
+**Usage:** `nsp →`
 
 **Generated Code:**
 
@@ -227,7 +238,7 @@ export { SampleProvider, useSample };
 
 ### Layout
 
-**Usage:** `nsl ->`
+**Usage:** `nsl →`
 
 **Generated Code:**
 
@@ -243,7 +254,7 @@ export default function SampleLayout({
 
 ### Template
 
-**Usage:** `nst ->`
+**Usage:** `nst →`
 
 **Generated Code:**
 
@@ -255,7 +266,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
 ### NextJS static metadata
 
-**Usage:** `nssm ->`
+**Usage:** `nssm →`
 
 **Generated Code:**
 
@@ -270,7 +281,7 @@ export const metadata: Metadata = {
 
 ### NextJS dynamic metadata
 
-**Usage:** `nsdm ->`
+**Usage:** `nsdm →`
 
 **Generated Code:**
 
@@ -289,7 +300,7 @@ export async function generateMetadata(
 
 ⚠️ Typescript (.ts file) only
 
-**Usage:** `nsm ->`
+**Usage:** `nsm →`
 
 **Generated Code:**
 

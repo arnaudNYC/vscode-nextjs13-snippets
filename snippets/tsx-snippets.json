@@ -187,6 +187,8 @@
     "body": [
       "\"use client\";",
       "",
+      "import React from \"react\";",
+      "",
       "interface ${1}ProviderProps {",
       "  children: React.ReactNode;",
       "  value: ${2};",
