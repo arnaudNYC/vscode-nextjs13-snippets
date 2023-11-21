@@ -1,7 +1,7 @@
 {
   "name": "vscode-nextjs13-snippets",
   "description": "Code snippets for React Server Components and NextJS 13+",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "React Server Components and NextJS 13+ code snippets",
   "publisher": "arnaudNYC",
   "icon": "images/ns.png",
