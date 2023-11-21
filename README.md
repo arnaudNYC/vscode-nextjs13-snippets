@@ -49,7 +49,7 @@ export interface ComponentProps {
 }
 
 export default function Component({ children }: ComponentProps) {
-  return <>{children};</>;
+  return <>{children}</>;
 }
 ```
 
@@ -99,7 +99,7 @@ export interface ServerComponentWithChildrenProps {
 export default function ServerComponentWithChildren({
   children,
 }: ServerComponentWithChildrenProps) {
-  return <>{children};</>;
+  return <>{children}</>;
 }
 ```
 
@@ -115,7 +115,7 @@ export interface ServerComponentProps {
 }
 
 export default function ServerComponent({ children }: ServerComponentProps) {
-  return <>{children};</>;
+  return <>{children}</>;
 }
 ```
 
@@ -151,7 +151,7 @@ export interface ServerComponentProps {
 export default async function ServerComponent({
   children,
 }: ServerComponentProps) {
-  return <>{children};</>;
+  return <>{children}</>;
 }
 ```
 
@@ -199,7 +199,7 @@ export interface ClientComponentProps {
 }
 
 export default function ClientComponent({ children }: ClientComponentProps) {
-  return <>{children};</>;
+  return <>{children}</>;
 }
 ```
 
