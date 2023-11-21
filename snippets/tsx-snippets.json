@@ -31,7 +31,7 @@
       "}",
       "",
       "export default function $1({ children }: $1Props) {",
-      "  return <>{children}$3;</>",
+      "  return <>{children}$3</>",
       "}",
       ""
     ]
@@ -79,7 +79,7 @@
       "}",
       "",
       "export default function $1({ children }: $1Props) {",
-      "  return <>{children}$3;</>",
+      "  return <>{children}$3</>",
       "}",
       ""
     ]
@@ -127,7 +127,7 @@
       "}",
       "",
       "export default async function $1({ children }: $1Props) {",
-      "  return <>{children}$3;</>",
+      "  return <>{children}$3</>",
       "}",
       ""
     ]
@@ -175,7 +175,7 @@
       "}",
       "",
       "export default function $1({ children }: $1Props) {",
-      "  return <>{children}$3;</>",
+      "  return <>{children}$3</>",
       "}",
       ""
     ]
@@ -271,5 +271,17 @@
       "  };",
       "}"
     ]
+  },
+  "use server": {
+    "scope": "typescriptreact",
+    "prefix": "nsus",
+    "description": "\"use server\";",
+    "body": ["\"use server\";"]
+  },
+  "use client": {
+    "scope": "typescriptreact",
+    "prefix": "nsuc",
+    "description": "\"use client\";",
+    "body": ["\"use client\";"]
   }
 }

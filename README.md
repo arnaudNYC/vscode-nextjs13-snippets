@@ -328,3 +328,35 @@ export function middleware(request: NextRequest) {
   return response;
 }
 ```
+
+### Server action
+
+⚠️ Typescript (.ts file) only
+
+**Usage:** `nssa →`
+
+**Generated Code:**
+
+```ts
+export async function serverAction(formData: FormData) {}
+```
+
+### use server
+
+**Usage:** `nsus →`
+
+**Generated Code:**
+
+```ts
+"use server";
+```
+
+### use client
+
+**Usage:** `nsuc →`
+
+**Generated Code:**
+
+```ts
+"use client";
+```

@@ -28,5 +28,17 @@
       "}",
       ""
     ]
+  },
+  "server action": {
+    "scope": "typescript",
+    "prefix": "nssa",
+    "description": "Server action",
+    "body": ["export async function $1(formData: FormData) {", "  $2", "}"]
+  },
+  "use server": {
+    "scope": "typescript",
+    "prefix": "nsus",
+    "description": "\"use server\";",
+    "body": ["\"use server\";", ""]
   }
 }

@@ -1,8 +1,8 @@
 {
   "name": "vscode-nextjs13-snippets",
-  "description": "Code snippets for NextJS 13 in TypeScript",
+  "description": "Code snippets for React Server Components and NextJS 13+",
   "version": "1.0.2",
-  "displayName": "NextJS 13 TypeScript code snippets",
+  "displayName": "React Server Components and NextJS 13+ code snippets",
   "publisher": "arnaudNYC",
   "icon": "images/ns.png",
   "license": "MIT",
